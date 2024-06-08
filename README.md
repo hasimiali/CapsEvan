@@ -1,10 +1,10 @@
 # CapsEvan
 
-![Alt text](image/SignIn.png "SignIn")
-![Alt text](image/ForgotPass.png "ForgotPass")
-![Alt text](image/CreateAccount.png "CreateAccount")
-![Alt text](image/Proficiency.png "Proficiency")
-![Alt text](image/SideBar.png "SideBar")
-![Alt text](image/Profile.png "Profile")
-![Alt text](image/ChooseLevel.png "ChooseLevel")
-![Alt text](image/Game.png "Game")
+![Alt text](Images/SignIn.png "SignIn")
+![Alt text](Images/ForgotPass.png "ForgotPass")
+![Alt text](Images/CreateAccount.png "CreateAccount")
+![Alt text](Images/Proficiency.png "Proficiency")
+![Alt text](Images/SideBar.png "SideBar")
+![Alt text](Images/Profile.png "Profile")
+![Alt text](Images/ChooseLevel.png "ChooseLevel")
+![Alt text](Images/Game.png "Game")
