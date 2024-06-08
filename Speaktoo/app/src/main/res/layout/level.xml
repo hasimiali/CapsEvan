@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".Level">
+
+    <TextView
+        android:id="@+id/textViewLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Choose\nLevel"
+        android:textColor="@color/white"
+        android:textSize="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineLevel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowLevel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/arrowLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="Press to go to option"
+        app:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_new_24"
+        app:tint="@color/brown" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewProficiency"
+        style="@style/custom_card_view_style"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guidelineLevel">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textLevel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/level1"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="1"
+                        android:textColorLink="@color/blue"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/level2"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="2"
+                        android:textColorLink="@color/blue"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/level3"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="3"
+                        android:textColorLink="@color/blue"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/level4"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="4"
+                        android:textColorLink="@color/blue"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
