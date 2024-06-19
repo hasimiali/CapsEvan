@@ -1,10 +1,11 @@
 package com.example.speaktoo.pages
 
+import android.content.Context
 import android.os.Bundle
 import android.content.Intent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.speaktoo.api.RetrofitClient
+import com.example.speaktoo.api.base.RetrofitClient
 import com.example.speaktoo.databinding.LoginBinding
 import com.example.speaktoo.models.LoginResponse
 import com.example.speaktoo.models.User
@@ -34,9 +35,22 @@ class MainActivity : AppCompatActivity() {
             RetrofitClient.instance.login(user).enqueue(object : Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                     if (response.isSuccessful) {
-                        Toast.makeText(this@MainActivity, "Login Successful", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@MainActivity, Proficiency::class.java)
-                        startActivity(intent)
+                        val uid = response.body()?.data?.uid
+                        val email = response.body()?.data?.email
+                        val username = response.body()?.data?.username
+
+                        if (uid != null && email != null && username != null) {
+                            val sharedPreferences = getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE)
+                            with(sharedPreferences.edit()) {
+                                putString("uid", uid)
+                                putString("email", email)
+                                putString("username", username)
+                                apply()
+                            }
+                            Toast.makeText(this@MainActivity, "Login Successful", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@MainActivity, Proficiency::class.java)
+                            startActivity(intent)
+                        }
                     } else {
                         Toast.makeText(this@MainActivity, "Login Failed", Toast.LENGTH_SHORT).show()
                     }

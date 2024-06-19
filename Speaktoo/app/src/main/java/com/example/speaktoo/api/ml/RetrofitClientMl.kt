@@ -1,13 +1,13 @@
-package com.example.speaktoo.api
+package com.example.speaktoo.api.ml
 
-// RetrofitClient.kt
+import com.example.speaktoo.api.base.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitClient {
-    private const val BASE_URL = "https://speaktoo-api-ygiysmsnnq-as.a.run.app"
+object RetrofitClientMl {
+    private const val BASE_URL = "https://speaktoo-generative-ygiysmsnnq-et.a.run.app"
 
     private val logging = HttpLoggingInterceptor().apply {
         setLevel(HttpLoggingInterceptor.Level.BODY)

@@ -1,11 +1,12 @@
 package com.example.speaktoo.pages
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.speaktoo.databinding.SignupBinding
 import android.widget.Toast
-import com.example.speaktoo.api.RetrofitClient
+import com.example.speaktoo.api.base.RetrofitClient
 import com.example.speaktoo.models.SignupResponse
 import com.example.speaktoo.models.User
 import retrofit2.Call
@@ -35,9 +36,17 @@ class SignUp : AppCompatActivity() {
             RetrofitClient.instance.signup(user).enqueue(object : Callback<SignupResponse> {
                 override fun onResponse(call: Call<SignupResponse>, response: Response<SignupResponse>) {
                     if (response.isSuccessful) {
-                        Toast.makeText(this@SignUp, "Signup Successful", Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@SignUp, MainActivity::class.java)
-                        startActivity(intent)
+                        val uid = response.body()?.data?.uid
+                        if (uid != null) {
+                            val sharedPreferences = getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE)
+                            with(sharedPreferences.edit()) {
+                                putString("uid", uid)
+                                apply()
+                            }
+                            Toast.makeText(this@SignUp, "Signup Successful", Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this@SignUp, Proficiency::class.java)
+                            startActivity(intent)
+                        }
                     } else {
                         Toast.makeText(this@SignUp, "Signup Failed", Toast.LENGTH_SHORT).show()
                     }

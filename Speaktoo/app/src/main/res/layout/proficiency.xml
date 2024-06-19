@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:fontFamily="sans-serif-medium"
-            android:text="Choose\nProfiency Level"
+            android:text="Choose\nTopic"
             android:textColor="@color/white"
             android:textSize="36dp"
             app:layout_constraintBottom_toTopOf="@+id/guidelineProficiency"
@@ -58,63 +58,107 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guidelineProficiency">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/textProficiency"
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/beginnerProficiency"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/blue"
-                    android:text="Beginner"
-                    android:textColorLink="@color/blue"
-                    android:textSize="24sp"
-                    app:cornerRadius="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/intermediateProficiency"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/blue"
-                    android:text="intermediate "
-                    android:textColorLink="@color/blue"
-                    android:textSize="24sp"
-                    app:cornerRadius="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/beginnerProficiency" />
+                    <Button
+                        android:id="@+id/chatting"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Chatting Day to Day"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
 
-                <Button
-                    android:id="@+id/advancedProficiency"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="@color/blue"
-                    android:text="advanced"
-                    android:textColorLink="@color/blue"
-                    android:textSize="24sp"
-                    app:cornerRadius="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/intermediateProficiency" />
+                    <Button
+                        android:id="@+id/answering"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Answering Interview"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <Button
+                        android:id="@+id/meeting"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Meeting"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/expressing"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Expressing Opinions"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/making_request"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Making Request and Offering Help"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/giving_receiving"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Giving and Receiving Direction"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
+
+                    <Button
+                        android:id="@+id/apologizing"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/blue"
+                        android:text="Apologizing and Complaining"
+                        android:textColorLink="@color/blue"
+                        android:textSize="24sp"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </ScrollView>
 
         </com.google.android.material.card.MaterialCardView>
 
