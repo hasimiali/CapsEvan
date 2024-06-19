@@ -1,23 +1,20 @@
-package com.example.speaktoo
+package com.example.speaktoo.pages
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.speaktoo.databinding.ProfileBinding
+import com.example.speaktoo.databinding.GameBinding
 
-class Profile : AppCompatActivity() {
-    private lateinit var binding: ProfileBinding
-
+class Game : AppCompatActivity() {
+    private lateinit var binding: GameBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ProfileBinding.inflate(layoutInflater)
+        binding = GameBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.arrowProfile.setOnClickListener {
+        binding.arrowGame.setOnClickListener {
             // Close the current activity
             finish()
         }
 
     }
-
-
 }

@@ -1,21 +1,23 @@
-package com.example.speaktoo
+package com.example.speaktoo.pages
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.speaktoo.databinding.ForgotBinding
+import com.example.speaktoo.databinding.ProfileBinding
 
-class Forgot : AppCompatActivity() {
-    private lateinit var binding: ForgotBinding
+class Profile : AppCompatActivity() {
+    private lateinit var binding: ProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ForgotBinding.inflate(layoutInflater)
+        binding = ProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.arrowForgot.setOnClickListener {
+        binding.arrowProfile.setOnClickListener {
             // Close the current activity
             finish()
         }
 
     }
+
+
 }

@@ -1,12 +1,11 @@
-package com.example.speaktoo
+package com.example.speaktoo.pages
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.example.speaktoo.R
 import com.example.speaktoo.databinding.ProficiencyBinding
 
 class Proficiency : AppCompatActivity() {

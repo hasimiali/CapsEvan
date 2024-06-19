@@ -1,10 +1,9 @@
-package com.example.speaktoo
+package com.example.speaktoo.pages
 
 import android.os.Bundle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import com.example.speaktoo.databinding.LevelBinding
-import com.example.speaktoo.databinding.LoginBinding
 
 class Level : AppCompatActivity() {
     private lateinit var binding: LevelBinding

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,7 @@
         android:theme="@style/Theme.Speaktoo"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".pages.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,12 +24,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Proficiency" />
-        <activity android:name=".Forgot" />
-        <activity android:name=".Game" />
-        <activity android:name=".Level" />
-        <activity android:name=".Profile" />
-        <activity android:name=".SignUp" />
+        <activity android:name=".pages.Proficiency" />
+        <activity android:name=".pages.Forgot" />
+        <activity android:name=".pages.Game" />
+        <activity android:name=".pages.Level" />
+        <activity android:name=".pages.Profile" />
+        <activity android:name=".pages.SignUp" />
     </application>
 
 </manifest>

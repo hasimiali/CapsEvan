@@ -7,13 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Proficiency">
+    tools:context=".pages.Proficiency">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/proficiency"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/blue"
-        tools:context=".Proficiency"
+        tools:context=".pages.Proficiency"
         android:fitsSystemWindows="true">
 
         <TextView
