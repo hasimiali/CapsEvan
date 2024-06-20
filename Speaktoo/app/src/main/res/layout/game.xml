@@ -12,14 +12,40 @@
         android:id="@+id/welcomeBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Listen \n Well"
+        android:text="Listen Well"
         android:textColor="@color/white"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineGame"
+        app:layout_constraintStart_toEndOf="@+id/arrowGame"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="The word"
+        android:textColor="@color/white"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/arrowGame" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/speaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:clickable="true"
+        android:contentDescription="@string/press_to_output_voice"
+        app:fabSize="normal"
+        app:layout_constraintStart_toEndOf="@+id/word"
+        app:layout_constraintTop_toBottomOf="@+id/arrowGame"
+        app:srcCompat="@drawable/baseline_volume_up_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/arrowGame"
@@ -73,44 +99,20 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/word"
-                            android:layout_width="241dp"
-                            android:layout_height="match_parent"
+                            android:id="@+id/definition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
                             android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
                             android:backgroundTint="@color/blue"
-                            android:text="@string/word"
+                            android:text="@string/definition"
                             android:textAlignment="textStart"
                             android:textColorLink="@color/blue"
                             app:cornerRadius="10dp" />
 
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/speaker"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:clickable="true"
-                            android:contentDescription="@string/press_to_output_voice"
-                            app:srcCompat="@drawable/baseline_volume_up_24"
-                            app:fabSize="normal"
-                            android:layout_gravity="center"
-                            />
                     </LinearLayout>
-
-                    <Button
-                        android:id="@+id/definition"
-                        android:layout_width="319dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:backgroundTint="@color/blue"
-                        android:text="@string/definition"
-                        android:textAlignment="textStart"
-                        android:textColorLink="@color/blue"
-                        app:cornerRadius="10dp" />
 
                     <Button
                         android:id="@+id/feedback"
